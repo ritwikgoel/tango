@@ -47,6 +47,28 @@ client.on('message',(message)=>{
   }
 });
     }
+    if(cmd==" trump"){
+        request('https://api.whatdoestrumpthink.com/api/v1/quotes/random', function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+    //console.log(body) 
+    const data=(JSON.parse(body))
+    message.reply(data.message)
+
+  }
+});
+    }
+
+//     if(cmd===" covid"){
+//         request('https://api.covid19india.org/state_district_wise.json', function (error, response, body) {
+//     if (!error && response.statusCode == 200) {
+//     //console.log(body) 
+//     const data=(JSON.parse(body))
+//     message.reply(data)
+
+//   }
+// });
+
+//     }
 }
 
 
