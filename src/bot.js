@@ -21,7 +21,14 @@ client.on('message',(message)=>{
     
         if(cmd===" tiny"){
             message.reply("Tiny is iron")
-        }if(cmd===" bye"){
+            
+        }
+
+        if(cmd===" do u love me"){
+            message.reply("No fuck u ")
+            
+        }
+        if(cmd===" bye"){
             message.reply("Goodnight")
         }
     if(cmd==" cp")
