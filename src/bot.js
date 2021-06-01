@@ -1,6 +1,6 @@
 
 require('dotenv').config({path: __dirname + '/.env'})
-let vars=require('../vars.js');
+let vars=require('../private/vars.js');
 const DISCORD_BOT_TOKEN=vars.DISCORD_BOT_TOKEN;
 const listOfCP=vars.listOfCP
 const request = require('request');
