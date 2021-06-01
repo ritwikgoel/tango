@@ -1,8 +1,8 @@
 
 require('dotenv').config({path: __dirname + '/.env'})
-const DISCORD_BOT_TOKEN="ODQ2Mjg3MTcwMTYyOTE3Mzc3.YKtUWA.npI7DH4ytrCw4fssvWygo-o9tjg";
-const listOfCP='https://clist.by/api/v1/contest/?username=tangobeer&api_key=f63b04ccd3652b48f1e06a5bc9faeb5a9cac1ec9'
-console.log(DISCORD_BOT_TOKEN);
+let vars=require('../vars.js');
+const DISCORD_BOT_TOKEN=vars.DISCORD_BOT_TOKEN;
+const listOfCP=vars.listOfCP
 const request = require('request');
 const axios = require('axios');
 
@@ -21,11 +21,6 @@ client.on('message',(message)=>{
     
         if(cmd===" tiny"){
             message.reply("Tiny is iron")
-            
-        }
-
-        if(cmd===" do u love me"){
-            message.reply("No fuck u ")
             
         }
         if(cmd===" bye"){
